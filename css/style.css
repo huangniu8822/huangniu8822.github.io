@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 12px;
+    background: #000;
+}
+html{
+    font-size: 12px;
+}
+.wrap{
+	width:300px;
+	height:300px;
+	margin:200px auto;
+	position:relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.box{
+	position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: mymove 10s linear infinite;
+    -moz-animation: mymove 10s linear infinite;
+    -ms-animation: mymove 10s linear infinite;
+    animation: mymove 10s linear infinite;
+	width: 300px;
+    height: 300px;
+    border-radius: 500px;
+    transform:rotateX(-106deg) rotateY(10deg) rotateZ(0deg);
+}
+.e,.w,.s,.n{
+	width:200px;
+	height:200px;
+	position:absolute;
+    font-size: 100px;
+    color: #fff;
+}
+.n{
+	top:-100px;
+    left: 50%;
+    margin-left: -100px;
+	transform: rotateX(90deg);
+}
+.e{
+	right:-100px;
+	top: 50%;
+    margin-top: -100px;
+	transform: rotateY(90deg) rotateZ(90deg);
+}
+.s{
+	bottom:-100px;
+    left: 50%;
+    margin-left: -100px;
+	transform: rotateX(90deg);
+}
+.w{
+	left:-100px;
+	top: 50%;
+    margin-top: -100px;
+    transform: rotateY(90deg) rotateZ(90deg);
+}
+@keyframes mymove{
+	0{ transform:rotateX(-106deg) rotateY(10deg) rotateZ(0deg); }
+	100% { transform:rotateX(-106deg) rotateY(10deg) rotateZ(360deg); }
+}
